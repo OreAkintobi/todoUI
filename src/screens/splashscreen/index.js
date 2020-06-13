@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 
 import { Container, Logo } from "./styles";
+import SafeAreaView from "../../commons/safe-area-view";
 
 export default function SplashScreen({ navigation }) {
   useEffect(() => {
@@ -13,8 +14,10 @@ export default function SplashScreen({ navigation }) {
   };
 
   return (
-    <Container>
-      <Logo source={require("../../../assets/icon.png")} />
-    </Container>
+    <SafeAreaView>
+      <Container>
+        <Logo source={require("../../../assets/icon.png")} />
+      </Container>
+    </SafeAreaView>
   );
 }
