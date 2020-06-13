@@ -1,7 +1,14 @@
 import React, { useEffect } from "react";
-
-import { Container, Logo } from "./styles";
 import SafeAreaView from "../../commons/safe-area-view";
+import Logo from "../../commons/logo";
+
+import {
+  Container,
+  BottomTextContainer,
+  BottomText,
+  BottomText2,
+  DividerText,
+} from "./styles";
 
 export default function ConfigScreen({ navigation }) {
   useEffect(() => {
@@ -16,7 +23,13 @@ export default function ConfigScreen({ navigation }) {
   return (
     <SafeAreaView>
       <Container>
-        <Logo source={require("../../../assets/icon.png")} />
+        <Logo />
+        <BottomTextContainer>
+          <BottomText>
+            Powered by<DividerText> | </DividerText>
+            <BottomText2>SystemsTech</BottomText2>
+          </BottomText>
+        </BottomTextContainer>
       </Container>
     </SafeAreaView>
   );

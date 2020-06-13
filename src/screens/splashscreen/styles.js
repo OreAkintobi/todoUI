@@ -6,10 +6,3 @@ export const Container = styled.View`
   align-items: center;
   background-color: #ffffff;
 `;
-
-export const Logo = styled.Image`
-  justify-content: center;
-  align-items: center;
-  width: 149.91px;
-  height: 100px;
-`;

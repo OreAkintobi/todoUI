@@ -7,9 +7,19 @@ export const Container = styled.View`
   background-color: #ffffff;
 `;
 
-export const Logo = styled.Image`
-  justify-content: center;
+export const BottomTextContainer = styled.View`
+  position: absolute;
+  height: 28px;
+  bottom: 20px;
   align-items: center;
-  width: 149.91px;
-  height: 100px;
+`;
+
+export const BottomText = styled.Text``;
+
+export const BottomText2 = styled.Text`
+  font-weight: bold;
+`;
+
+export const DividerText = styled.Text`
+  font-size: 24px;
 `;
