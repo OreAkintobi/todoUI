@@ -1,30 +1,16 @@
-import React, { useState } from "react";
-import { StyleSheet, Text, View } from "react-native";
-import { theme } from "../../theme/types";
+import React from "react";
+import { useThemeContext } from "../../theme";
 import SafeAreaView from "../../commons/safe-area-view";
+import { Container, MidText } from "./styles";
 
 const HomeScreen = () => {
   return (
     <SafeAreaView>
-      <View style={styles.container}>
-        <Text style={styles.text}>
-          Open up App.js to start working on your app!
-        </Text>
-      </View>
+      <Container>
+        <MidText>Open up App.js to start working on your app!</MidText>
+      </Container>
     </SafeAreaView>
   );
 };
 
 export default HomeScreen;
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  text: {
-    fontFamily: theme.fonts.RobotoMediumItalic,
-  },
-});

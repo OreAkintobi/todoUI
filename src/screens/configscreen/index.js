@@ -25,10 +25,9 @@ export default function ConfigScreen({ navigation }) {
       <Container>
         <Logo />
         <BottomTextContainer>
-          <BottomText>
-            Powered by<DividerText> | </DividerText>
-            <BottomText2>SystemsTech</BottomText2>
-          </BottomText>
+          <BottomText>Powered by</BottomText>
+          <DividerText> | </DividerText>
+          <BottomText2>SystemsTech</BottomText2>
         </BottomTextContainer>
       </Container>
     </SafeAreaView>
