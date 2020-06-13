@@ -1,23 +1,16 @@
-import React from "react";
-import { useFonts } from "@use-expo/font";
-import { View, ActivityIndicator } from "react-native";
+import React, { useState } from "react";
+import { StoreProvider } from "./src/store";
+import AppLoading from "./src/components/AppLoading";
 import AppRouter from "./src";
-import fonts from "./src/libs/fonts";
 
-export default () => {
-  let [fontsLoaded] = useFonts({ ...fonts });
+export default function App() {
+  const [isAppReady, setIsAppReady] = useState(false);
 
-  if (!fontsLoaded) {
-    return (
-      <View
-        style={{
-          flex: 1,
-          alignItems: "center",
-          justifyContent: "center",
-        }}
-      >
-        <ActivityIndicator size="large" />
-      </View>
-    );
-  } else return <AppRouter />;
-};
+  return isAppReady ? (
+    <StoreProvider>
+      <AppRouter />
+    </StoreProvider>
+  ) : (
+    <AppLoading setIsAppReady={setIsAppReady} />
+  );
+}
