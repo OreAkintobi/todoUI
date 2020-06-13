@@ -3,6 +3,7 @@ import SplashScreen from "./splashscreen";
 import ConfigScreen from "./configscreen";
 import LoginScreen from "./loginscreen";
 import SignupScreen from "./signupscreen";
+import AirtimeScreen from "./airtimescreen";
 
 export default {
   HomeScreen,
@@ -10,4 +11,5 @@ export default {
   ConfigScreen,
   LoginScreen,
   SignupScreen,
+  AirtimeScreen,
 };

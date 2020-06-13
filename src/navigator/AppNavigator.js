@@ -11,6 +11,15 @@ export default function AppNavigator() {
       screenOptions={{ headerShown: false }}
     >
       <AppStack.Screen name="HomeScreen" component={Screens.HomeScreen} />
+      <AppStack.Screen
+        name="AirtimeScreen"
+        component={Screens.AirtimeScreen}
+        options={{
+          headerShown: true,
+          title: "Airtime",
+          headerBackTitleVisible: false,
+        }}
+      />
     </AppStack.Navigator>
   );
 }
