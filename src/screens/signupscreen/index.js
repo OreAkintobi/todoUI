@@ -1,40 +1,19 @@
 import React from "react";
 import SafeAreaView from "../../commons/safe-area-view";
-import Logo from "../../commons/logo";
-import { theme } from "../../theme/types";
+import AuthForm from "../../components/AuthForm";
 
-import {
-  Container,
-  LoginBodyContainer,
-  LoginHeaderText,
-  Input,
-  Button,
-  ButtonText,
-} from "./styles";
+import { Container } from "./styles";
 
 const SignupScreen = ({ navigation }) => {
   return (
     <SafeAreaView>
       <Container>
-        <Logo />
-        <LoginBodyContainer>
-          <LoginHeaderText>Create your account</LoginHeaderText>
-          <Input
-            placeholder="Email"
-            placeholderTextColor={theme.colors.LIGHT_GRAY_TEXT}
-          />
-          <Input
-            placeholder="Password"
-            placeholderTextColor={theme.colors.LIGHT_GRAY_TEXT}
-          />
-          <Input
-            placeholder="Confirm Password"
-            placeholderTextColor={theme.colors.LIGHT_GRAY_TEXT}
-          />
-          <Button onPress={() => navigation.navigate("LoginScreen")}>
-            <ButtonText>Sign up</ButtonText>
-          </Button>
-        </LoginBodyContainer>
+        <AuthForm
+          headerText="Create your account"
+          inputs={["Email", "Password", "Confirm Password"]}
+          buttonText="Sign up"
+          handlePress={() => navigation.navigate("LoginScreen")}
+        />
       </Container>
     </SafeAreaView>
   );
