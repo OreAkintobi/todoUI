@@ -7,7 +7,7 @@ const HomeScreen = () => {
   return (
     <SafeAreaView>
       <Container>
-        <MidText>Open up App.js to start working on your app!</MidText>
+        <MidText>This is the Home Screen.</MidText>
       </Container>
     </SafeAreaView>
   );

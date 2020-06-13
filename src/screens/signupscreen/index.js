@@ -12,7 +12,7 @@ import {
   ButtonText,
 } from "./styles";
 
-const SignupScreen = () => {
+const SignupScreen = ({ navigation }) => {
   return (
     <SafeAreaView>
       <Container>
@@ -31,7 +31,7 @@ const SignupScreen = () => {
             placeholder="Confirm Password"
             placeholderTextColor={theme.colors.LIGHT_GRAY_TEXT}
           />
-          <Button>
+          <Button onPress={() => navigation.navigate("LoginScreen")}>
             <ButtonText>Sign up</ButtonText>
           </Button>
         </LoginBodyContainer>
