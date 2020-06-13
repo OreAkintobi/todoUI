@@ -1,6 +1,7 @@
 import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
+import AuthNavigator from "./navigator/AuthNavigator";
 import Screens from "./screens";
 
 const RootStack = createStackNavigator();
@@ -21,7 +22,7 @@ export default function AppNavigator() {
         />
         <RootStack.Screen
           name="HomeScreen"
-          component={Screens.HomeScreen}
+          component={AuthNavigator}
           options={{ headerShown: false }}
         />
       </RootStack.Navigator>
