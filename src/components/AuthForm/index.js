@@ -3,7 +3,7 @@ import Logo from "../../commons/logo";
 import { theme } from "../../theme/types";
 
 import {
-  Container,
+  LogoContainer,
   LoginBodyContainer,
   LoginHeaderText,
   Input,
@@ -11,26 +11,26 @@ import {
   ButtonText,
 } from "./styles";
 
-const SignupScreen = () => {
+const SignupScreen = ({ headerText, inputs, buttonText, handlePress }) => {
   return (
-    <LoginBodyContainer>
-      <LoginHeaderText>Create your account</LoginHeaderText>
-      <Input
-        placeholder="Email"
-        placeholderTextColor={theme.colors.LIGHT_GRAY_TEXT}
-      />
-      <Input
-        placeholder="Password"
-        placeholderTextColor={theme.colors.LIGHT_GRAY_TEXT}
-      />
-      <Input
-        placeholder="Confirm Password"
-        placeholderTextColor={theme.colors.LIGHT_GRAY_TEXT}
-      />
-      <Button>
-        <ButtonText>Sign up</ButtonText>
-      </Button>
-    </LoginBodyContainer>
+    <>
+      <LogoContainer>
+        <Logo />
+      </LogoContainer>
+      <LoginBodyContainer>
+        <LoginHeaderText>{headerText}</LoginHeaderText>
+        {inputs.map((input, index) => (
+          <Input
+            key={index}
+            placeholder={input}
+            placeholderTextColor={theme.colors.LIGHT_GRAY_TEXT}
+          />
+        ))}
+        <Button onPress={handlePress}>
+          <ButtonText>{buttonText}</ButtonText>
+        </Button>
+      </LoginBodyContainer>
+    </>
   );
 };
 
