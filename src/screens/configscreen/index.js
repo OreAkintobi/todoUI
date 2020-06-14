@@ -12,7 +12,7 @@ import {
 
 export default function ConfigScreen({ navigation }) {
   useEffect(() => {
-    setTimeout(() => checkInitialLaunch(), 2000);
+    setTimeout(() => checkInitialLaunch(), 1000);
   }, []);
 
   const checkInitialLaunch = async () => {

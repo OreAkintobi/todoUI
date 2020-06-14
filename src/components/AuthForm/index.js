@@ -11,7 +11,7 @@ import {
   ButtonText,
 } from "./styles";
 
-const SignupScreen = ({ headerText, inputs, buttonText, handlePress }) => {
+const AuthForm = ({ headerText, inputs, buttonText, handlePress }) => {
   return (
     <>
       <LogoContainer>
@@ -23,7 +23,7 @@ const SignupScreen = ({ headerText, inputs, buttonText, handlePress }) => {
           <Input
             key={index}
             placeholder={input}
-            placeholderTextColor={theme.colors.LIGHT_GRAY_TEXT}
+            placeholderTextColor={theme.colors.MEDIUM_GRAY}
           />
         ))}
         <Button onPress={handlePress}>
@@ -34,4 +34,4 @@ const SignupScreen = ({ headerText, inputs, buttonText, handlePress }) => {
   );
 };
 
-export default SignupScreen;
+export default AuthForm;
