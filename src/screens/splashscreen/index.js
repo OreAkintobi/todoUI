@@ -6,7 +6,7 @@ import SafeAreaView from "../../commons/safe-area-view";
 
 export default function SplashScreen({ navigation }) {
   useEffect(() => {
-    setTimeout(() => checkInitialLaunch(), 2000);
+    setTimeout(() => checkInitialLaunch(), 1000);
   }, []);
 
   const checkInitialLaunch = async () => {

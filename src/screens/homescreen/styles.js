@@ -3,7 +3,6 @@ import { theme } from "../../theme/types";
 
 export const Container = styled.View`
   flex: 1;
-  justify-content: flex-start;
   align-items: center;
   background-color: ${theme.colors.COLOR_WHITE};
 `;
@@ -25,7 +24,7 @@ export const Activity = styled.View`
   width: 96px;
   height: 83px;
   margin-top: 5px;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
@@ -35,6 +34,8 @@ export const ActivitySelector = styled.TouchableOpacity`
   width: 56px;
   height: 56px;
   border-radius: 56px;
+  align-items: center;
+  justify-content: center;
 `;
 
 export const ActivityCaption = styled.Text`
@@ -52,7 +53,7 @@ export const AdvertSpace = styled.TouchableOpacity`
   margin-top: 15px;
   justify-content: center;
   align-items: center;
-  background-color: ${theme.colors.BG_LIGHTER_GRAY};
+  background-color: ${theme.colors.MEDIUM_GRAY};
 `;
 
 export const AdvertText = styled.Text`
@@ -62,4 +63,11 @@ export const AdvertText = styled.Text`
   text-transform: capitalize;
   font-family: ${theme.fonts.RobotoRegular};
   color: ${theme.colors.DARK_TEXT};
+`;
+
+export const WalletText = styled.Text`
+  font-size: 14px;
+  line-height: 16px;
+  font-family: ${theme.fonts.RobotoBold};
+  color: ${theme.colors.COLOR_WHITE};
 `;
