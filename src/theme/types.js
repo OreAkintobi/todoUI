@@ -25,7 +25,9 @@ const colors = {
   LIGHT_GREEN: "#00FF44",
   LIGHT_RED: "#FF0000",
   DARK_RED: "#6C1111",
+  OFF_WHITE: "#FFFDFD",
   DARK_COLOR_LOW_OPACITY: "rgba(0, 0, 0, 0.1)",
+  DARK_COLOR_HIGH_OPACITY: "rgba(0, 0, 0, 0.88);",
 };
 
 export const theme = { colors, fonts };
