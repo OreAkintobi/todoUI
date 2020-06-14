@@ -21,7 +21,7 @@ export const ActivitiesContainer = styled.View`
   align-content: center;
 `;
 
-export const Activity = styled.TouchableOpacity`
+export const Activity = styled.View`
   width: 96px;
   height: 83px;
   margin-top: 5px;
@@ -35,7 +35,6 @@ export const ActivitySelector = styled.TouchableOpacity`
   width: 56px;
   height: 56px;
   border-radius: 56px;
-  background-color: ${theme.colors.DARK_TEXT};
 `;
 
 export const ActivityCaption = styled.Text`

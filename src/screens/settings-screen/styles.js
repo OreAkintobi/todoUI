@@ -8,5 +8,5 @@ export const Container = styled.View`
   background-color: ${theme.colors.COLOR_WHITE};
 `;
 export const MidText = styled.Text`
-  font-family: ${theme.fonts.RobotoBlackItalic};
+  font-family: ${theme.fonts.RobotoMedium};
 `;
