@@ -3,7 +3,6 @@ import { createMaterialBottomTabNavigator } from "@react-navigation/material-bot
 import { theme } from "../theme/types";
 import TabBarLabel from "../commons/tab-bar-label";
 import Screens from "../screens";
-import HairCareIcon from "../../assets/icons/hair_care";
 import HomeIcon from "../../assets/icons/BottomNav/HomeIcon";
 import PurchasesIcon from "../../assets/icons/BottomNav/PurchasesIcon";
 import SettingsIcon from "../../assets/icons/BottomNav/SettingsIcon";
@@ -18,7 +17,7 @@ export default function BottomNavigator() {
   return (
     <Tab.Navigator
       activeColor={colors.DARK_TEXT}
-      inactiveColor={colors.DARK_GRAY_TEXT}
+      inactiveColor={colors.DARK_GRAY}
       barStyle={{ backgroundColor: colors.COLOR_WHITE }}
       initialRouteName="HomeScreen"
       labeled={false}
