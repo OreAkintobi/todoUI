@@ -26,5 +26,5 @@ export const SelectorContainer = styled.View`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  background-color: ${theme.colors.BG_GRAY_OPERATOR};
+  background-color: ${theme.colors.LIGHT_GRAY};
 `;

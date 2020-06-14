@@ -23,7 +23,7 @@ const AuthForm = ({ headerText, inputs, buttonText, handlePress }) => {
           <Input
             key={index}
             placeholder={input}
-            placeholderTextColor={theme.colors.LIGHT_GRAY_TEXT}
+            placeholderTextColor={theme.colors.MEDIUM_GRAY}
           />
         ))}
         <Button onPress={handlePress}>
