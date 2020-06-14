@@ -33,8 +33,21 @@ export default function BottomNavigator() {
       />
 
       <Tab.Screen
-        name="AirtimeScreen"
-        component={Screens.AirtimeScreen}
+        name="PurchasesScreen"
+        component={Screens.PurchasesScreen}
+        options={{
+          tabBarIcon: ({ color, focused }) => (
+            <IconContainer>
+              <HairCareIcon fillColor={color} isFocused={focused} />
+              <TabBarLabel label="Purchases" {...{ color, focused }} />
+            </IconContainer>
+          ),
+        }}
+      />
+
+      <Tab.Screen
+        name="SettingsScreen"
+        component={Screens.SettingsScreen}
         options={{
           tabBarIcon: ({ color, focused }) => (
             <IconContainer>
