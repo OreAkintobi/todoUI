@@ -4,6 +4,10 @@ import { theme } from "../theme/types";
 import TabBarLabel from "../commons/tab-bar-label";
 import Screens from "../screens";
 import HairCareIcon from "../../assets/icons/hair_care";
+import HomeIcon from "../../assets/icons/BottomNav/HomeIcon";
+import PurchasesIcon from "../../assets/icons/BottomNav/PurchasesIcon";
+import SettingsIcon from "../../assets/icons/BottomNav/SettingsIcon";
+import UserIcon from "../../assets/icons/BottomNav/UserIcon";
 import { IconContainer } from "./styles";
 
 const Tab = createMaterialBottomTabNavigator();
@@ -25,8 +29,8 @@ export default function BottomNavigator() {
         options={{
           tabBarIcon: ({ color, focused }) => (
             <IconContainer>
-              <HairCareIcon fillColor={color} isFocused={focused} />
-              <TabBarLabel label="Regimen" {...{ color, focused }} />
+              <HomeIcon fillColor={color} isFocused={focused} />
+              <TabBarLabel label="Home" {...{ color, focused }} />
             </IconContainer>
           ),
         }}
@@ -38,7 +42,7 @@ export default function BottomNavigator() {
         options={{
           tabBarIcon: ({ color, focused }) => (
             <IconContainer>
-              <HairCareIcon fillColor={color} isFocused={focused} />
+              <PurchasesIcon fillColor={color} isFocused={focused} />
               <TabBarLabel label="Purchases" {...{ color, focused }} />
             </IconContainer>
           ),
@@ -51,8 +55,21 @@ export default function BottomNavigator() {
         options={{
           tabBarIcon: ({ color, focused }) => (
             <IconContainer>
-              <HairCareIcon fillColor={color} isFocused={focused} />
+              <SettingsIcon fillColor={color} isFocused={focused} />
               <TabBarLabel label="Settings" {...{ color, focused }} />
+            </IconContainer>
+          ),
+        }}
+      />
+
+      <Tab.Screen
+        name="ProfileScreen"
+        component={Screens.ProfileScreen}
+        options={{
+          tabBarIcon: ({ color, focused }) => (
+            <IconContainer>
+              <UserIcon fillColor={color} isFocused={focused} />
+              <TabBarLabel label="You" {...{ color, focused }} />
             </IconContainer>
           ),
         }}
