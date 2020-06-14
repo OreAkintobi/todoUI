@@ -24,7 +24,7 @@ import {
 
 const activityItems = [
   { caption: "wallet", screen: "WalletScreen", icon: <WalletIcon /> },
-  { caption: "buy data", screen: null, icon: <BuyDataIcon /> },
+  { caption: "buy data", screen: "DataScreen", icon: <BuyDataIcon /> },
   { caption: "buy airtime", screen: "AirtimeScreen", icon: <BuyAirtimeIcon /> },
   { caption: "wallet history", screen: null, icon: <WalletHistoryIcon /> },
   { caption: "pricing", screen: null, icon: <PricingIcon /> },

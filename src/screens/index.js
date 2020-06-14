@@ -4,6 +4,7 @@ import ConfigScreen from "./configscreen";
 import LoginScreen from "./loginscreen";
 import SignupScreen from "./signupscreen";
 import AirtimeScreen from "./airtimescreen";
+import DataScreen from "./datascreen";
 import PurchasesScreen from "./purchases-screen";
 import SettingsScreen from "./settings-screen";
 import WalletScreen from "./walletscreen";
@@ -16,6 +17,7 @@ export default {
   LoginScreen,
   SignupScreen,
   AirtimeScreen,
+  DataScreen,
   PurchasesScreen,
   SettingsScreen,
   WalletScreen,

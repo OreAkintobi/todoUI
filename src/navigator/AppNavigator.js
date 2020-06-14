@@ -33,6 +33,16 @@ export default function AppNavigator() {
       />
 
       <AppStack.Screen
+        name="DataScreen"
+        component={Screens.DataScreen}
+        options={{
+          headerShown: true,
+          title: "Data",
+          headerBackTitleVisible: false,
+        }}
+      />
+
+      <AppStack.Screen
         name="WalletScreen"
         component={Screens.WalletScreen}
         options={{
