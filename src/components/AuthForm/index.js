@@ -11,7 +11,7 @@ import {
   ButtonText,
 } from "./styles";
 
-const SignupScreen = ({ headerText, inputs, buttonText, handlePress }) => {
+const AuthForm = ({ headerText, inputs, buttonText, handlePress }) => {
   return (
     <>
       <LogoContainer>
@@ -34,4 +34,4 @@ const SignupScreen = ({ headerText, inputs, buttonText, handlePress }) => {
   );
 };
 
-export default SignupScreen;
+export default AuthForm;
