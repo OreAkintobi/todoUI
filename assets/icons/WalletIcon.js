@@ -4,7 +4,7 @@ import Svg, { G, Circle, Path, Defs } from "react-native-svg";
 
 function WalletIcon(props) {
   return (
-    <Svg width={64} height={61} viewBox="0 0 64 61" fill="none" {...props}>
+    <Svg width={64} height={64} viewBox="0 0 64 61" fill="none" {...props}>
       <G filter="url(#prefix__filter0_d)">
         <Circle
           cx={32}
