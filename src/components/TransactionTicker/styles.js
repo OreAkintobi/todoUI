@@ -8,6 +8,8 @@ export const Container = styled.View`
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
+  border-bottom-width: 1px;
+  border-bottom-color: ${theme.colors.DARK_COLOR_LOW_OPACITY};
 `;
 
 export const TransactionType = styled.View`
