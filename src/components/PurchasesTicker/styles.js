@@ -3,10 +3,10 @@ import { theme } from "../../theme/types";
 
 export const Container = styled.View`
   margin-top: 15px;
-  width: 100%;
+  width: 90%;
   height: 74px;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
   border-bottom-width: 1px;
   border-bottom-color: ${theme.colors.DARK_COLOR_LOW_OPACITY};
@@ -28,17 +28,9 @@ export const TransactionDetailsContainer = styled.View`
 `;
 
 export const TransactionTypeText = styled.Text`
-  font-size: 10px;
-  line-height: 12px;
-  font-family: ${theme.fonts.RobotoBold};
-  color: ${theme.colors.DARK_TEXT};
-  text-transform: uppercase;
-`;
-
-export const TransactionDetails = styled.Text`
-  font-size: 19px;
-  line-height: 19px;
-  font-family: ${theme.fonts.RobotoRegular};
+  font-size: 12px;
+  line-height: 14px;
+  font-family: ${theme.fonts.RobotoMedium};
   color: ${theme.colors.DARK_TEXT};
   text-transform: uppercase;
 `;
@@ -51,9 +43,10 @@ export const TransactionDate = styled.Text`
   text-transform: capitalize;
 `;
 
-// export const TransactionAmount = styled.Text`
-// font-size: 19px;
-// line-height: 19px;
-// font-family: ${theme.fonts.RobotoReguar};
-// color: ${theme.colors.DARK_TEXT}
-// `;
+export const TransactionAmountContainer = styled.View`
+  height: 74px;
+  width: 100px;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: space-evenly;
+`;
