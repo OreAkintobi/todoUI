@@ -9,6 +9,7 @@ import {
 
 const SelectorInput = ({
   labelTextUpper,
+  labelTextCenter,
   labelTextLower,
   selectorInputPlaceholder,
 }) => {
@@ -16,8 +17,13 @@ const SelectorInput = ({
     <>
       <Container>
         <LabelTextContainer>
-          <LabelText>{labelTextUpper}</LabelText>
-          <LabelText>{labelTextLower}</LabelText>
+          {labelTextUpper ? <LabelText>{labelTextUpper}</LabelText> : null}
+          {labelTextCenter ? (
+            <LabelText style={{ fontSize: 16, lineHeight: 19 }}>
+              {labelTextCenter}
+            </LabelText>
+          ) : null}
+          {labelTextLower ? <LabelText>{labelTextLower}</LabelText> : null}
         </LabelTextContainer>
         <InputContainer>
           <Input placeholder={selectorInputPlaceholder} />

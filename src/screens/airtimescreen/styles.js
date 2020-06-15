@@ -45,7 +45,26 @@ export const PaymentOptionContainer = styled.View`
   margin-bottom: 15px;
   height: 42px;
   background-color: ${theme.colors.DARK_TEXT};
+  flex-direction: row;
   align-items: center;
+  justify-content: space-around;
+`;
+
+export const PaymentOptionButton = styled.TouchableOpacity`
+  height: 28px;
+  width: 38%;
+  border-radius: 8px;
+  border: 1px solid ${theme.colors.COLOR_WHITE};
+  align-items: center;
+  justify-content: center;
+`;
+
+export const PaymentOptionButtonText = styled.Text`
+  font-size: 12px;
+  line-height: 14px;
+  font-family: ${theme.fonts.RobotoMedium};
+  text-transform: uppercase;
+  color: ${theme.colors.DARK_TEXT};
 `;
 
 export const PaymentButton = styled.TouchableOpacity`

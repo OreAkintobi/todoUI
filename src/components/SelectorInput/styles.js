@@ -10,9 +10,9 @@ export const Container = styled.View`
 `;
 
 export const LabelTextContainer = styled.View`
-  height: 100%;
+  height: 62px;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
 `;
 
