@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { ScrollView } from "react-native";
 import SafeAreaView from "../../commons/safe-area-view";
 import SelectorBox from "../../components/SelectorBox";
 import SelectorInput from "../../components/SelectorInput";
+import { theme } from "../../theme/types";
+
 import {
   Container,
   OptionBoxContainer,
@@ -13,11 +15,17 @@ import {
   PaymentOptionContainer,
   PaymentButton,
   PayText,
+  PaymentOptionButton,
+  PaymentOptionButtonText,
 } from "./styles";
 
 const operators = ["MTN", "Airtel", "9Mobile", "Glo"];
+const buttons = ["Wallet", "ATM"];
 
 const AirtimeScreen = () => {
+  const { colors, fonts } = theme;
+  const [selectedOption, setSelectedOption] = useState("Wallet");
+
   return (
     <SafeAreaView>
       <ScrollView
@@ -62,17 +70,51 @@ const AirtimeScreen = () => {
           <PaymentContainer>
             <SelectorHeader>select payment method</SelectorHeader>
 
-            <PaymentOptionContainer></PaymentOptionContainer>
+            <PaymentOptionContainer>
+              {buttons.map((item) => (
+                <PaymentOptionButton
+                  key={item}
+                  style={{
+                    backgroundColor:
+                      selectedOption === item
+                        ? colors.COLOR_WHITE
+                        : colors.DARK_TEXT,
+                  }}
+                  onPress={() => {
+                    setSelectedOption(item);
+                  }}
+                >
+                  <PaymentOptionButtonText
+                    style={{
+                      color:
+                        selectedOption === item
+                          ? colors.DARK_TEXT
+                          : colors.COLOR_WHITE,
+                    }}
+                  >
+                    {item}
+                  </PaymentOptionButtonText>
+                </PaymentOptionButton>
+              ))}
+            </PaymentOptionContainer>
           </PaymentContainer>
 
           <SelectorBox
             operatorHeader=""
             children={
-              <SelectorInput
-                labelTextUpper="Wallet Balance"
-                labelTextLower="Wallet Pin"
-                selectorInputPlaceholder="Your wallet pin"
-              />
+              selectedOption === "Wallet" ? (
+                <SelectorInput
+                  labelTextUpper="Wallet Balance"
+                  labelTextCenter="NGN 3,500"
+                  labelTextLower="Wallet Pin"
+                  selectorInputPlaceholder="Your wallet pin"
+                />
+              ) : (
+                <SelectorInput
+                  labelTextUpper="Email"
+                  selectorInputPlaceholder="Your email"
+                />
+              )
             }
           />
 
