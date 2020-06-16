@@ -1,19 +1,20 @@
-import React from "react";
-import { ScrollView } from "react-native";
-import SafeAreaView from "../../commons/safe-area-view";
-import TopBar from "../../components/TopBar";
+import React, { useState } from "react";
+import { ScrollView, View } from "react-native";
+import Modal from "react-native-modal";
 import { theme } from "../../theme/types";
+import SafeAreaView from "../../commons/safe-area-view";
 import PurchasesTicker from "../../components/PurchasesTicker";
-import UpIcon from "../../../assets/icons/Small/UpIcon";
-import DownIcon from "../../../assets/icons/Small/DownIcon";
 import CautionIcon from "../../../assets/icons/Small/CautionIcon";
 import CheckMarkIcon from "../../../assets/icons/Small/CheckMarkIcon";
 import DataIcon from "../../../assets/icons/Small/DataIcon";
+import FilterIcon from "../../../assets/icons/Small/FilterIcon";
+import Header from "../../commons/header";
 
-import { Container } from "./styles";
+import { Container, ModalView, ModalButtons } from "./styles";
 
 const PurchasesScreen = ({ navigation }) => {
   const { colors } = theme;
+  const [isVisible, setIsVisible] = useState(false);
 
   const transactionItems = [
     {
@@ -41,6 +42,13 @@ const PurchasesScreen = ({ navigation }) => {
 
   return (
     <SafeAreaView>
+      <Header
+        title="Purchases"
+        headerRight={() => <FilterIcon />}
+        functionPassDown={() => {
+          setIsVisible(true);
+        }}
+      />
       <ScrollView
         showsVerticalScrollIndicator={false}
         contentContainerStyle={{
@@ -60,6 +68,27 @@ const PurchasesScreen = ({ navigation }) => {
           ))}
         </Container>
       </ScrollView>
+
+      <Modal
+        isVisible={isVisible}
+        animationIn="fadeIn"
+        animationOut="fadeOut"
+        onBackdropPress={() => {
+          setIsVisible(false);
+        }}
+        useNativeDriver={true}
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          margin: 0,
+        }}
+        children={<FilterIcon />}
+      >
+        <ModalView>
+          <ModalButtons />
+        </ModalView>
+      </Modal>
     </SafeAreaView>
   );
 };
