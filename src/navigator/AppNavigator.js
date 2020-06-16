@@ -12,51 +12,13 @@ export default function AppNavigator() {
       initialRouteName="HomeScreen"
       screenOptions={{ headerShown: false }}
     >
-      <AppStack.Screen
-        name="HomeScreen"
-        component={BottomNavigator}
-        options={{
-          headerShown: true,
-          title: "DataNow",
-          headerBackTitleVisible: false,
-        }}
-      />
+      <AppStack.Screen name="HomeScreen" component={BottomNavigator} />
 
-      <AppStack.Screen
-        name="AirtimeScreen"
-        component={Screens.AirtimeScreen}
-        options={{
-          headerShown: true,
-          title: "Airtime",
-          headerBackTitleVisible: false,
-        }}
-      />
+      <AppStack.Screen name="AirtimeScreen" component={Screens.AirtimeScreen} />
 
-      <AppStack.Screen
-        name="DataScreen"
-        component={Screens.DataScreen}
-        options={{
-          headerShown: true,
-          title: "Data",
-          headerBackTitleVisible: false,
-        }}
-      />
+      <AppStack.Screen name="DataScreen" component={Screens.DataScreen} />
 
-      <AppStack.Screen
-        name="WalletScreen"
-        component={Screens.WalletScreen}
-        options={{
-          headerShown: true,
-          title: "Wallet",
-          headerBackTitleVisible: false,
-          // headerStyle: {
-          //   backgroundColor: theme.colors.DARK_COLOR_HIGH_OPACITY,
-          // },
-          // headerTitleStyle: {
-          //   color: theme.colors.COLOR_WHITE,
-          // },
-        }}
-      />
+      <AppStack.Screen name="WalletScreen" component={Screens.WalletScreen} />
     </AppStack.Navigator>
   );
 }
