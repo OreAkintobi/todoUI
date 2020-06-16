@@ -1,5 +1,6 @@
 import styled from "styled-components/native";
 import { theme } from "../../theme/types";
+import applyScale from "../../utils/applyScale";
 
 export const Container = styled.View`
   flex: 1;
@@ -42,4 +43,18 @@ export const SeeMoreText = styled.Text`
   line-height: 19px;
   font-family: ${theme.fonts.RobotoRegular};
   color: ${theme.colors.DARK_TEXT};
+`;
+
+export const ModalView = styled.View`
+  background-color: ${theme.colors.COLOR_WHITE};
+  height: ${applyScale(650)}px;
+  width: 80%;
+`;
+
+export const ModalButtons = styled.View`
+  align-self: flex-end;
+  background-color: ${theme.colors.COLOR_WHITE};
+  height: ${applyScale(52)}px;
+  border-top-width: 1px;
+  border-top-color: ${theme.colors.DARK_GRAY};
 `;

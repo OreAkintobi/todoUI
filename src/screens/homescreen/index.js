@@ -1,6 +1,8 @@
 import React from "react";
-import { ScrollView } from "react-native";
+import { ScrollView, StatusBar } from "react-native";
 import SafeAreaView from "../../commons/safe-area-view";
+import { theme } from "../../theme/types";
+import Header from "../../commons/header";
 import TopBar from "../../components/TopBar";
 import BuyAirtimeIcon from "../../../assets/icons/BuyAirtimeIcon";
 import BuyDataIcon from "../../../assets/icons/BuyDataIcon";
@@ -8,8 +10,8 @@ import ContactIcon from "../../../assets/icons/ContactIcon";
 import PricingIcon from "../../../assets/icons/PricingIcon";
 import WalletHistoryIcon from "../../../assets/icons/WalletHistoryIcon";
 import WalletIcon from "../../../assets/icons/WalletIcon";
-import { theme } from "../../theme/types";
 import WalletIconSmall from "../../../assets/icons/Small/WalletIconSmall";
+import NotificationIcon from "../../../assets/icons/Small/NotificationIcon";
 
 import {
   Container,
@@ -36,6 +38,7 @@ const HomeScreen = ({ navigation }) => {
 
   return (
     <SafeAreaView>
+      <Header title="DataNow" headerRight={() => <NotificationIcon />} />
       <ScrollView
         showsVerticalScrollIndicator={false}
         contentContainerStyle={{

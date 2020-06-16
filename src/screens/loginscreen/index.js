@@ -14,6 +14,10 @@ const LoginScreen = ({ navigation }) => {
           inputs={["Email", "Password"]}
           buttonText="Sign in"
           handlePress={() => navigation.navigate("HomeScreen")}
+          forgotPassword="Forgot password?"
+          alternativeSign="or sign in with"
+          alternativeSign2="Don't have an account?"
+          authType=" Sign up"
         />
       </Container>
     </SafeAreaView>

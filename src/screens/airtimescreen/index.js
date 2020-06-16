@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import { ScrollView } from "react-native";
+import { theme } from "../../theme/types";
+import Header from "../../commons/header";
 import SafeAreaView from "../../commons/safe-area-view";
 import SelectorBox from "../../components/SelectorBox";
 import SelectorInput from "../../components/SelectorInput";
-import { theme } from "../../theme/types";
 
 import {
   Container,
@@ -23,11 +24,12 @@ const operators = ["MTN", "Airtel", "9Mobile", "Glo"];
 const buttons = ["Wallet", "ATM"];
 
 const AirtimeScreen = () => {
-  const { colors, fonts } = theme;
+  const { colors } = theme;
   const [selectedOption, setSelectedOption] = useState("Wallet");
 
   return (
     <SafeAreaView>
+      <Header title="Airtime" headerLeft />
       <ScrollView
         showsVerticalScrollIndicator={false}
         contentContainerStyle={{

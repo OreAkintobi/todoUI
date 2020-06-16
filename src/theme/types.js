@@ -13,6 +13,12 @@ const fonts = {
   RobotoThinItalic: "Roboto-ThinItalic",
 };
 
+const sizes = {
+  FONT_SMALL_SIZE: 10,
+  FONT_MEDIUM_SIZE: 12,
+  FONT_LARGE_SIZE: 15,
+};
+
 const colors = {
   BG_OFF_WHITE: "#E5E5E5",
   DARK_TEXT: "#000000",
@@ -29,4 +35,4 @@ const colors = {
   DARK_COLOR_HIGH_OPACITY: "rgba(0, 0, 0, 0.88);",
 };
 
-export const theme = { colors, fonts };
+export const theme = { colors, sizes, fonts };

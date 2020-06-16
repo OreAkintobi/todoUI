@@ -1,11 +1,12 @@
 import React from "react";
 import { ScrollView } from "react-native";
+import { theme } from "../../theme/types";
 import SafeAreaView from "../../commons/safe-area-view";
 import TopBar from "../../components/TopBar";
-import { theme } from "../../theme/types";
+import TransactionTicker from "../../components/TransactionTicker";
+import Header from "../../commons/header";
 import WalletIconSmall from "../../../assets/icons/Small/WalletIconSmall";
 import FundIconSmall from "../../../assets/icons/Small/FundIconSmall";
-import TransactionTicker from "../../components/TransactionTicker";
 import UpIcon from "../../../assets/icons/Small/UpIcon";
 import DownIcon from "../../../assets/icons/Small/DownIcon";
 
@@ -55,6 +56,7 @@ const WalletScreen = ({ navigation }) => {
 
   return (
     <SafeAreaView>
+      <Header title="Wallet" headerLeft />
       <ScrollView
         showsVerticalScrollIndicator={false}
         contentContainerStyle={{
