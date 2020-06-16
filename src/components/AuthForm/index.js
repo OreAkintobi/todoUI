@@ -1,6 +1,7 @@
 import React from "react";
 import Logo from "../../commons/logo";
 import { theme } from "../../theme/types";
+import GoogleIcon from "../../../assets/icons/Small/GoogleIcon";
 
 import {
   LogoContainer,
@@ -9,9 +10,25 @@ import {
   Input,
   Button,
   ButtonText,
+  ForgotPassword,
+  ForgotPasswordText,
+  AlternativeSign,
+  Alternative,
+  GoogleIconContainer,
 } from "./styles";
 
-const AuthForm = ({ headerText, inputs, buttonText, handlePress }) => {
+const AuthForm = ({
+  headerText,
+  inputs,
+  buttonText,
+  handlePress,
+  forgotPassword,
+  alternativeSign,
+  alternativeSign2,
+  authType,
+}) => {
+  const { colors } = theme;
+
   return (
     <>
       <LogoContainer>
@@ -29,6 +46,21 @@ const AuthForm = ({ headerText, inputs, buttonText, handlePress }) => {
         <Button onPress={handlePress}>
           <ButtonText>{buttonText}</ButtonText>
         </Button>
+        {forgotPassword ? (
+          <ForgotPassword style={{ alignSelf: "flex-end" }}>
+            <ForgotPasswordText>{forgotPassword}</ForgotPasswordText>
+          </ForgotPassword>
+        ) : null}
+        <AlternativeSign>{alternativeSign}</AlternativeSign>
+        <GoogleIconContainer>
+          <GoogleIcon />
+        </GoogleIconContainer>
+        <Alternative>
+          <AlternativeSign>{alternativeSign2}</AlternativeSign>
+          <AlternativeSign style={{ color: colors.BLUE_LINK_TEXT }}>
+            {authType}
+          </AlternativeSign>
+        </Alternative>
       </LoginBodyContainer>
     </>
   );

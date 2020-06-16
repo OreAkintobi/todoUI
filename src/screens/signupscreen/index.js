@@ -13,6 +13,9 @@ const SignupScreen = ({ navigation }) => {
           inputs={["Email", "Password", "Confirm Password"]}
           buttonText="Sign up"
           handlePress={() => navigation.navigate("LoginScreen")}
+          alternativeSign="or sign up with"
+          alternativeSign2="Already have an account?"
+          authType=" Sign in"
         />
       </Container>
     </SafeAreaView>
