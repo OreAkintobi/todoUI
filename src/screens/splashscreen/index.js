@@ -11,7 +11,7 @@ export default function SplashScreen({ navigation }) {
 
   const checkInitialLaunch = async () => {
     // do checks here for initial launch and subsequent launch
-    navigation.replace("ConfigScreen");
+    navigation.replace("HomeScreen");
   };
 
   return (

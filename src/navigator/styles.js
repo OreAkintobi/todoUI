@@ -1,5 +1,5 @@
-import styled from 'styled-components/native';
-import applyScale from '../utils/applyScale';
+import styled from "styled-components/native";
+import applyScale from "../utils/applyScale";
 
 export const IconContainer = styled.View`
   flex: 1;

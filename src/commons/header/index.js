@@ -3,7 +3,7 @@ import { StatusBar } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { theme } from "../../theme/types";
 import boxShadow from "../../utils/boxShadows";
-import BackButtonIcon from "../../../assets/icons/Small/BackButtonIcon";
+import HomeIcon from "../../../assets/icons/BottomNav/HomeIcon";
 
 import {
   Container,
@@ -31,12 +31,7 @@ export default function Header(props) {
   return (
     <>
       <StatusBar barStyle="dark-content" backgroundColor={colors.COLOR_WHITE} />
-      <Container
-        style={[
-          boxShadow({ elevation: 5, shadowColor: colors.DARK_TEXT }),
-          style,
-        ]}
-      >
+      <Container>
         {props.headerLeft ? (
           <HeaderLeft style={headerLeftContainerStyle}>
             <BackButtonTouchable
@@ -44,7 +39,7 @@ export default function Header(props) {
                 navigation.goBack();
               }}
             >
-              <BackButtonIcon />
+              <HomeIcon />
             </BackButtonTouchable>
             {headerBackTitleVisible && <HeaderBackTitle>back</HeaderBackTitle>}
           </HeaderLeft>

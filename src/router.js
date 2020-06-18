@@ -1,12 +1,12 @@
 import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
-import AuthNavigator from "./navigator/AuthNavigator";
+import AppNavigator from "./navigator/AppNavigator";
 import Screens from "./screens";
 
 const RootStack = createStackNavigator();
 
-export default function AppNavigator() {
+export default function Router() {
   return (
     <NavigationContainer>
       <RootStack.Navigator initialRouteName="SplashScreen">
@@ -16,13 +16,8 @@ export default function AppNavigator() {
           options={{ headerShown: false }}
         />
         <RootStack.Screen
-          name="ConfigScreen"
-          component={Screens.ConfigScreen}
-          options={{ headerShown: false }}
-        />
-        <RootStack.Screen
           name="HomeScreen"
-          component={AuthNavigator}
+          component={AppNavigator}
           options={{ headerShown: false }}
         />
       </RootStack.Navigator>

@@ -3,71 +3,42 @@ import { theme } from "../../theme/types";
 
 export const Container = styled.View`
   flex: 1;
+  margin-top: 60px;
+  justify-content: flex-start;
   align-items: center;
   background-color: ${theme.colors.COLOR_WHITE};
 `;
 
-export const ActivitiesContainer = styled.View`
-  margin-top: 30px;
-  height: 224px;
-  width: 100%;
-  border-radius: 25px;
-  background-color: ${theme.colors.OFF_WHITE};
+export const Title = styled.View`
   flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
   align-items: center;
-  align-content: center;
-`;
-
-export const Activity = styled.View`
-  width: 96px;
-  height: 83px;
-  margin-top: 5px;
-  margin-bottom: 10px;
-  flex-direction: column;
   justify-content: space-between;
-  align-items: center;
 `;
 
-export const ActivitySelector = styled.TouchableOpacity`
-  width: 56px;
-  height: 56px;
-  border-radius: 56px;
-  align-items: center;
-  justify-content: center;
+export const HeaderBold = styled.Text`
+  font-family: ${theme.fonts.FUTURA_MD_MEDIUM};
+  font-size: 40px;
 `;
 
-export const ActivityCaption = styled.Text`
-  font-size: 12px;
-  line-height: 14px;
-  text-align: center;
-  text-transform: capitalize;
-  font-family: ${theme.fonts.RobotoRegular};
-  color: ${theme.colors.DARK_TEXT};
+export const HeaderRegular = styled.Text`
+  font-family: ${theme.fonts.FUTURA_MD_LIGHT};
+  font-size: 40px;
 `;
 
-export const AdvertSpace = styled.TouchableOpacity`
-  width: 90%;
-  height: 77px;
-  margin-top: 15px;
+export const AddList = styled.TouchableOpacity`
+  margin-top: 40px;
   justify-content: center;
   align-items: center;
-  background-color: ${theme.colors.MEDIUM_GRAY};
+  height: 30px;
+  width: 30px;
+  border: 1px solid ${theme.colors.DARK_GRAY};
+  border-radius: 5px;
 `;
 
-export const AdvertText = styled.Text`
-  font-size: 16px;
-  line-height: 19px;
-  text-align: center;
-  text-transform: capitalize;
-  font-family: ${theme.fonts.RobotoRegular};
-  color: ${theme.colors.DARK_TEXT};
-`;
-
-export const WalletText = styled.Text`
-  font-size: 14px;
-  line-height: 16px;
-  font-family: ${theme.fonts.RobotoBold};
-  color: ${theme.colors.COLOR_WHITE};
+export const TaskBoxContainer = styled.View`
+  justify-content: center;
+  flex-direction: row;
+  margin-left: 80px;
+  align-items: flex-start;
+  width: 100%;
 `;

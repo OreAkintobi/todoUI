@@ -13,12 +13,7 @@ export default function AppNavigator() {
       screenOptions={{ headerShown: false }}
     >
       <AppStack.Screen name="HomeScreen" component={BottomNavigator} />
-
-      <AppStack.Screen name="AirtimeScreen" component={Screens.AirtimeScreen} />
-
-      <AppStack.Screen name="DataScreen" component={Screens.DataScreen} />
-
-      <AppStack.Screen name="WalletScreen" component={Screens.WalletScreen} />
+      <AppStack.Screen name="TaskScreen" component={Screens.TaskScreen} />
     </AppStack.Navigator>
   );
 }

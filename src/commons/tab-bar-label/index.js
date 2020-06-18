@@ -10,7 +10,7 @@ export default function TabBarLabel(props) {
   return (
     <Label
       style={{
-        fontFamily: focused ? fonts.RobotoMedium : fonts.RobotoRegular,
+        fontFamily: focused ? fonts.FUTURA_MD_BOLD : fonts.FUTURA_MD_MEDIUM,
         fontSize: focused ? 12 : 11,
         color,
       }}

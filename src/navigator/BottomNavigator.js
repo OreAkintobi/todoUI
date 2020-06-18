@@ -1,12 +1,10 @@
 import React from "react";
 import { createMaterialBottomTabNavigator } from "@react-navigation/material-bottom-tabs";
 import { theme } from "../theme/types";
-import TabBarLabel from "../commons/tab-bar-label";
 import Screens from "../screens";
 import HomeIcon from "../../assets/icons/BottomNav/HomeIcon";
-import PurchasesIcon from "../../assets/icons/BottomNav/PurchasesIcon";
-import SettingsIcon from "../../assets/icons/BottomNav/SettingsIcon";
-import UserIcon from "../../assets/icons/BottomNav/UserIcon";
+import CalendarIcon from "../../assets/icons/BottomNav/CalendarIcon";
+import MenuIcon from "../../assets/icons/BottomNav/MenuIcon";
 import { IconContainer } from "./styles";
 
 const Tab = createMaterialBottomTabNavigator();
@@ -18,7 +16,7 @@ export default function BottomNavigator() {
     <Tab.Navigator
       activeColor={colors.DARK_TEXT}
       inactiveColor={colors.DARK_GRAY}
-      barStyle={{ backgroundColor: colors.COLOR_WHITE }}
+      barStyle={{ backgroundColor: colors.COLOR_WHITE, height: 80 }}
       initialRouteName="HomeScreen"
       labeled={false}
     >
@@ -29,46 +27,30 @@ export default function BottomNavigator() {
           tabBarIcon: ({ color, focused }) => (
             <IconContainer>
               <HomeIcon fillColor={color} isFocused={focused} />
-              <TabBarLabel label="Home" {...{ color, focused }} />
             </IconContainer>
           ),
         }}
       />
 
       <Tab.Screen
-        name="PurchasesScreen"
-        component={Screens.PurchasesScreen}
+        name="CalendarScreen"
+        component={Screens.CalendarScreen}
         options={{
           tabBarIcon: ({ color, focused }) => (
             <IconContainer>
-              <PurchasesIcon fillColor={color} isFocused={focused} />
-              <TabBarLabel label="Purchases" {...{ color, focused }} />
+              <CalendarIcon fillColor={color} isFocused={focused} />
             </IconContainer>
           ),
         }}
       />
 
       <Tab.Screen
-        name="SettingsScreen"
-        component={Screens.SettingsScreen}
+        name="MenuScreen"
+        component={Screens.MenuScreen}
         options={{
           tabBarIcon: ({ color, focused }) => (
             <IconContainer>
-              <SettingsIcon fillColor={color} isFocused={focused} />
-              <TabBarLabel label="Settings" {...{ color, focused }} />
-            </IconContainer>
-          ),
-        }}
-      />
-
-      <Tab.Screen
-        name="ProfileScreen"
-        component={Screens.ProfileScreen}
-        options={{
-          tabBarIcon: ({ color, focused }) => (
-            <IconContainer>
-              <UserIcon fillColor={color} isFocused={focused} />
-              <TabBarLabel label="You" {...{ color, focused }} />
+              <MenuIcon fillColor={color} isFocused={focused} />
             </IconContainer>
           ),
         }}

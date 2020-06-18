@@ -1,16 +1,9 @@
 const fonts = {
-  RobotoBlack: "Roboto-Black",
-  RobotoBlackItalic: "Roboto-BlackItalic",
-  RobotoBold: "Roboto-Bold",
-  RobotoBoldItalic: "Roboto-BoldItalic",
-  RobotoItalic: "Roboto-Italic",
-  RobotoLight: "Roboto-Light",
-  RobotoLightItalic: "Roboto-LightItalic",
-  RobotoMedium: "Roboto-Medium",
-  RobotoMediumItalic: "Roboto-MediumItalic",
-  RobotoRegular: "Roboto-Regular",
-  RobotoThin: "Roboto-Thin",
-  RobotoThinItalic: "Roboto-ThinItalic",
+  FUTURA_MD_BOLD: "FuturaMD-Bold",
+  FUTURA_MD_BOLD_ITALIC: "FuturaMD-Bold-Italic",
+  FUTURA_MD_LIGHT: "FuturaMD-Light",
+  FUTURA_MD_MEDIUM: "FuturaMD-Medium",
+  FUTURA_MD_MEDIUM_ITALIC: "FuturaMD-Medium-Italic",
 };
 
 const sizes = {
@@ -31,6 +24,7 @@ const colors = {
   LIGHT_RED: "#FF0000",
   DARK_RED: "#6C1111",
   OFF_WHITE: "#FFFDFD",
+  PURPLE: "#3a2c85",
   DARK_COLOR_LOW_OPACITY: "rgba(0, 0, 0, 0.1)",
   DARK_COLOR_HIGH_OPACITY: "rgba(0, 0, 0, 0.88);",
 };
